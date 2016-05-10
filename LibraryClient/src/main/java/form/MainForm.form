@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="form.MainForm">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="center:45px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="fill:245px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:19px:noGrow"/>
+    <rowspec value="top:5dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <colspec value="center:450px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="center:550px:noGrow"/>
+    <constraints>
+      <xy x="27" y="17" width="1011" height="518"/>
+    </constraints>
+    <properties>
+      <inheritsPopupMenu value="false"/>
+      <opaque value="true"/>
+      <preferredSize width="1010" height="500"/>
+    </properties>
+    <border type="bevel-lowered"/>
+    <children>
+      <component id="5130" class="javax.swing.JButton" binding="buttonCustomerList">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font size="18" style="1"/>
+          <text value="Список читателей"/>
+        </properties>
+      </component>
+      <component id="45ad8" class="javax.swing.JButton" binding="buttonBookList">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="18" style="1"/>
+          <text value="Список книг"/>
+        </properties>
+      </component>
+      <component id="ea39b" class="javax.swing.JLabel" binding="labelCustomer">
+        <constraints>
+          <grid row="4" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="14" style="1"/>
+          <text value="Список выданных книг"/>
+        </properties>
+      </component>
+      <component id="a7c78" class="javax.swing.JLabel" binding="labelBookHistory">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <font size="14" style="1"/>
+          <text value="История выдачи книги читателям"/>
+        </properties>
+      </component>
+      <component id="ffe2e" class="javax.swing.JList" binding="listCustomer">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms top="10" left="10" bottom="10" right="10" defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <maximumSize width="500" height="300"/>
+          <preferredSize width="200" height="300"/>
+          <requestFocusEnabled value="false"/>
+        </properties>
+      </component>
+      <component id="7f3ae" class="javax.swing.JList" binding="listBooks">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms top="10" left="10" bottom="10" right="10" defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <maximumSize width="500" height="300"/>
+          <preferredSize width="200" height="300"/>
+          <requestFocusEnabled value="false"/>
+        </properties>
+      </component>
+      <component id="f6258" class="javax.swing.JList" binding="listBookHistory">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms top="10" left="10" bottom="10" right="10" defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <maximumSize width="500" height="300"/>
+          <preferredSize width="200" height="300"/>
+          <requestFocusEnabled value="false"/>
+        </properties>
+      </component>
+      <component id="2476c" class="javax.swing.JList" binding="listCustomerBook">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms top="10" left="10" bottom="10" right="10" defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <maximumSize width="500" height="300"/>
+          <preferredSize width="200" height="300"/>
+          <requestFocusEnabled value="false"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

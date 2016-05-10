@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Клиент</title>
+</head>
+<body>
+    <h2>Данные клиента</h2>
+    <form action="#" th:action="@{/customer}" th:object="${customer}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <p>ФИО <input type="text" th:field="*{fio}"  required="true"/></p>
+        <p>Дата рождения <input type="date" th:field="*{birthdate}"  required="true"/></p>
+        <p><input type="submit" value="Применить"/></p>
+    </form>
+</body>
+</html>

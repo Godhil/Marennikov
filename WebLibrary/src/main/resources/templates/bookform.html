@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Книга</title>
+</head>
+<body>
+    <h2>Данные книги</h2>
+    <form action="#" th:action="@{/book}" th:object="${book}"  method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <p>Автор <input type="text" th:field="*{author}" required="true"/></p>
+        <p>Название <input type="text" th:field="*{title}" required="true"/></p>
+        <p>Издатель <input type="text" th:field="*{publisher}" required="true"/></p>
+        <p>Год Издания <input type="text" th:field="*{publishyear}" required="true" pattern="[0-9]{4}" maxlength="4"/></p>
+        <p><input type="submit" value="Применить"/></p>
+    </form>
+</body>
+</html>

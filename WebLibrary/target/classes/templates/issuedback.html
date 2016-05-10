@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Возврат</title>
+</head>
+<body>
+<h2>Возврат книги</h2>
+<form action="#" th:action="@{/issued}" th:object="${issued}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <p>Книга: <input hidden="true" th:field="*{book}"/> <output  th:text="${issued.book.title}"/></p>
+    <p>ФИО читателя: <input hidden="true" th:field="*{customer}" /><output  th:text="${issued.customer.fio}"/></p>
+    <p>Дата выдачи: <input readonly="true" type="date" th:field="*{out}"/></p>
+    <p>Дата возврата <input type="date" th:field="*{back}" required="true"/></p>
+
+    <p><input type="submit" value="Применить"/></p>
+</form>
+
+</body>
+</html>

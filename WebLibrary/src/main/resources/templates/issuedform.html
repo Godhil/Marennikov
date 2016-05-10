@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Выдача</title>
+</head>
+<body>
+    <h2>Выдача книги</h2>
+    <form action="#" th:action="@{/issued}" th:object="${issued}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <p>Книга
+            <select th:field="*{book}" >
+                <option th:each="book:${books}"
+                    th:value="${book.id}"
+                    th:text="${book.title}">мау</option>
+            </select>
+
+        </p>
+        <p>ФИО читателя
+            <select th:field="*{customer}" >
+                <option th:each="customer:${customers}"
+                        th:value="${customer.id}"
+                        th:text="${customer.fio}"></option>
+            </select>
+        </p>
+        <p>Дата выдачи <input type="date" th:field="*{out}"  required="true"/></p>
+        <p th:hidden="true">Дата возврата <input type="date" th:field="*{back}" th:value="NULL"/></p>
+
+        <p><input type="submit" value="Применить"/></p>
+    </form>
+
+</body>
+</html>

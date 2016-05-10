@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Выданные книги</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"/>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/}">
+        <button>На главную</button>
+    </form>
+    <div th:if="${not #lists.isEmpty(issueds)}">
+        <table class="table table-striped">
+            <h2>Список выданных книг</h2>
+            <thead>
+            <tr>
+                <th>Кому выдана</th>
+                <th>Название книги</th>
+                <th>Автор</th>
+                <th>Дата выдачи</th>
+                <th>Дата возврата</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="issued:${issueds}">
+                <td th:text="${issued.customer.fio}"></td>
+                <td th:text="${issued.book.title}"></td>
+                <td th:text="${issued.book.author}"></td>
+                <td th:text="${issued.out}"></td>
+                <td th:text="${issued.back}"></td>
+                <td><a th:href="${'/issued/back/'+{issued.id}}">Возврат книги</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
